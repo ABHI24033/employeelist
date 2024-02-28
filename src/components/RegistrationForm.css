@@ -1,0 +1,153 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"); */
+
+
+
+:root {
+  --main-blue: #71b7e6;
+  --main-purple: #9b59b6;
+  --main-grey: #ccc;
+  --sub-grey: #d9d9d9;
+}
+
+.required::after{
+    content: "*";
+    color: red;
+}
+.Employee_registration{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+/* container and form */
+.container {
+  max-width: 700px;
+  width: 100%;
+  /* background: #fff; */
+  padding: 25px 30px;
+  border-radius: 5px;
+  background-color: lightgray;
+  margin: 1rem ;
+}
+.container .title {
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+}
+
+
+.container form .user__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+/* inside the form user details */
+form .user__details .input__box {
+  width: calc(100% / 2 - 20px);
+  margin-bottom: 15px;
+}
+
+.user__details .input__box .details {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+.user__details .input__box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--main-grey);
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user__details .input__box input:focus,
+.user__details .input__box input:valid {
+  border-color: var(--main-purple);
+}
+
+/* inside the form gender details */
+
+.gender_details{
+    width: 47%;
+}
+.gender_details>label{
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 5px;
+}
+.gender_details>span{
+    display: block;
+    font-weight: 500;
+    margin-top: 1.3rem;
+    display: block;
+}
+.Check__box{
+    width: 47%;
+}
+.Check__box>span{
+    display: block;
+    font-weight: 500;
+    margin-top: 1.3rem;
+    display: block;
+}
+.Check__box >label{
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 5px;
+}
+#maritalStatus{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    padding: 10px ;
+    border-radius: 5px;
+}
+
+.button{
+    background-color: rgb(29, 103, 240);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    margin: 0rem 1rem; 
+    cursor: pointer;
+}
+button:hover{
+    background-color: #2da1ee;
+}
+
+
+
+@media only screen and (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+
+  form .user__details .input__box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  form .gender__details .category {
+    width: 100%;
+  }
+
+  .container form .user__details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .user__details::-webkit-scrollbar {
+    width: 0;
+  }
+}
